@@ -38,7 +38,7 @@ public class StudentManagementSystemDao implements StudentManagementSystemInterf
 		try (Connection con = JdbcUtilies.buildConnection();){
 			Statement stmt = con.createStatement();
 			
-			String sqlQuery = "select studentId, studentName, rollNo, grade";
+			String sqlQuery = "select * from student";
 			ResultSet rs = stmt.executeQuery(sqlQuery);
 			
 			while(rs.next()) {
